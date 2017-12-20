@@ -3,7 +3,7 @@ pipeline {
 	stages {
 		stage('Build') {
 			steps {
-				echo "checkout complete"
+				sh 'mvn install'
 			}
 		}
 	}
