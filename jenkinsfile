@@ -1,4 +1,10 @@
-node {
-	checkout scm
-	mvn install
+pipeline {
+	agent any
+	stages {
+		stage('Build') {
+			steps {
+			mvn install
+			}
+		}
+	}
 }
